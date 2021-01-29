@@ -24,7 +24,7 @@ function proveraImena(){
 
 async function podesiKredit(){
     let kreditPolje=document.getElementById("kredit");
-    const jedan= await fetch("http:localhost:3000/stanjeKredita",{
+    const jedan= await fetch("https://grcki-kino-epos.herokuapp.com/stanjeKredita",{
         method:'POST',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify({name:ime})
@@ -281,7 +281,7 @@ function podesiKreditInterno(){
 
 function azurirajKreditNaServeru(){
     console.log("da");
-    fetch("http://localhost:3000/azuriranjeKredita",{
+    fetch("https://grcki-kino-epos.herokuapp.com/azuriranjeKredita",{
         method:'PUT',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify({name:ime,kredit:kredit})

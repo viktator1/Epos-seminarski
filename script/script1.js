@@ -16,7 +16,7 @@ function prenosImena(e){
     document.getElementById("ime").value="";
     document.getElementById("sifra").value="";
 
-    fetch("http://localhost:3000/signin",{
+    fetch("https://grcki-kino-epos.herokuapp.com/signin",{
         method:"POST",
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify({name:ime,password:sifra})

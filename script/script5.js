@@ -24,7 +24,7 @@ function prenosImena(e){
         return;
     }
 
-    fetch("http://localhost:3000/register",{
+    fetch("https://grcki-kino-epos.herokuapp.com/register",{
         method:"POST",
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify({name:ime,password:sifra})
