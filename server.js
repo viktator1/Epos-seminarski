@@ -1,3 +1,5 @@
+const {database}=require('pg');
+
 const express=require("express");
 const cors=require("cors");
 const knex=require("knex");
@@ -21,7 +23,10 @@ function prikaziTabelu(){
     database.select('*').from('korisnici').then(data=>console.log(data));
 }
 
-app.get("/",(req,res)=>{res.send("aplikacija radi");})
+app.get("/",(req,res)=>{
+    prikaziTabelu();
+    res.send("aplikacija radi");
+})
 
 app.post("/register",(req,res)=>{
     let ime=req.body.name;
