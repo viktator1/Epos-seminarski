@@ -7,7 +7,7 @@ const app=express();
 const database=knex ({
     client: 'pg',
     connection: {
-      connectionString : process.env.DATABASE_URL,
+        connectionString : process.env.DATABASE_URL,
         ssl:true
     }
   });
@@ -26,6 +26,7 @@ app.get("/",(req,res)=>{res.send("aplikacija radi");})
 app.post("/register",(req,res)=>{
     let ime=req.body.name;
     let sifra=req.body.password;
+    console.log("ime: ",ime," sifra: ",sifra);
     database('korisnici').insert({name:ime,password:sifra})
     .then((ans)=>{       
         res.status(200).json("uspesna registracija");
@@ -38,6 +39,7 @@ app.post("/register",(req,res)=>{
 app.post("/signin",(req,res)=>{
     let ime=req.body.name;
     let sifra=req.body.password;
+    
     database('korisnici').where({name:ime,password:sifra})
     .then(ans=>{
         if(ans.length) res.status(200).json("uspesno logovanje");
@@ -50,7 +52,8 @@ app.post("/stanjeKredita",(req,res)=>{
     database.select('novac').from('korisnici').where('name','=',ime)
     .then(data=>{
         res.json({'novac':data[0].novac});
-    });
+    })
+    .catch((err)=>res.status(400).json("greska"));
 })
 
 app.put("/azuriranjeKredita",(req,res)=>{
