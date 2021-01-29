@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+
+    margin: 0;
+    padding: 0;
+}
+
+.spojeno {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.zaglavlje {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #f7b42c;
+    background-image: linear-gradient(315deg, #f7b42c 0%, #fc575e 60%);
+    background-image: url(https://img.freepik.com/free-photo/empty-save-texture-room-light_1258-175.jpg?size=626&ext=jpg);
+    color: white;
+}
+
+.ime-projekta {
+    font-size: 5rem;
+    margin: 1%;
+}
+
+.linkovi-zaglavlje ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 2rem;
+}
+
+.linkovi-zaglavlje li {
+    list-style: none;
+}
+
+.linkovi-zaglavlje li a {
+    text-decoration: none;
+    color: white;
+    padding: 2rem;
+    display: block;
+}
+
+.linkovi-zaglavlje li:hover {
+    background-color: darkgray;
+}
+
+.dugme-meni {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60px;
+    height: 40px;
+
+}
+
+.dugme-meni .crta {
+    height: 8px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media(max-width: 1150px) {
+    .dugme-meni {
+        display: flex;
+
+    }
+
+    .linkovi-zaglavlje {
+        display: none;
+        width: 100%;
+    }
+
+    .zaglavlje {
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #fec84e;
+
+    }
+
+    .linkovi-zaglavlje ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .linkovi-zaglavlje li {
+        text-align: center;
+    }
+
+    .linkovi-zaglavlje li a {
+        padding: .5rem 1rem;
+    }
+
+    .linkovi-zaglavlje.active {
+        display: flex;
+    }
+
+}
+
+
+@media(max-width: 1000px) {
+    .kontejner {
+        flex-wrap: wrap;
+        object-position: center;
+    }
+}
+
+.kontejner {
+    width: auto;
+
+
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    margin-left: 30%;
+
+
+}
+
+.slika {
+    width: auto;
+}
+
+.baner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgIBwcHBwgHBwcHBwoHBwcHBw8ICQcKFREWFhURExMYHSggGCYlJxMVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0NDw0NDysZFRkrKy0rLTcrNysrKystLSsrKysrLSsrKysrKysrKysrKysrKysrKysrKysrKysrKystK//AABEIALsBDgMBIgACEQEDEQH/xAAYAAEBAQEBAAAAAAAAAAAAAAAAAQIDB//EABgQAQEBAQEAAAAAAAAAAAAAAAABERIC/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAECAwYF/8QAGhEBAQEBAQEBAAAAAAAAAAAAAAEREgITA//aAAwDAQACEQMRAD8A82AfKe9AAAAAABcUXExRcRrEGsMGsTDGsMNXGRrDEMZwxrDF0xgaxMExExrEVmxkUGcQAQAAAAAAAAAAAAUijUgouI3IYuCyI3IGLio1PKYY1hg1yzhjWGGryzhjWGGpyxiN4mDN8s2M43iYrFjKNVFYsZRpFYsQAQAAAAAAAAWI0LBSLEbkI0jUiOkhIo1IjpImLi4uI6TymLi4uI1PLOGNYYavLGGN4mCcsYljaKxYwlasRWLGErVSq52M1GqzVc7ERUVigAgAAAAACxUiwbixqJGmXSEaSNRHSRZFFiOshI0RYy6yGLhFRuRMMawwXljDGsSjNjCVus1WLGazW6zWnOxms1pKscrGazWqzWnKoy0lVzqADIAAAAACxqJFiNxY1GY1EdI1FiRYldo1GozGoy6+WliRYy6xoFR0gKDTKNIM1mstVmq5VmpWqzWnKs1mtVmtOVZStM1XKs1KtSq51AFYAAAAAAaixmLBuNRqMxYy6RuLGY1EdY1GozFjLrK1GozFiOsrSsrqOkrQmmouiGorNpWarNVi1KlWs1XKpWaqVqONZSrWarnUqVUrTnUAGAAAAAAFistDUWNRmLEblajTEajLrK1K1GGpUdJWpWmIsqOkrems6uo3PTWms6aYvS6iaaJfQlpqWqxaVmlqK52lZpalacrUqVazVc7RmqisUAGQAAAAABUAaVlRuVqNMLKjcrcqsLqOkrerrGqy3PTems6aY103qazpodNaazpph0tqampqsX0rJqaMWiUtStMWlQSqxagAwAAAAAAAAAAKgDSsqNytausKjUrS6zpqNdN6azppjXTWms6aYdNampppidLqampomrqU1FZtBEVi1UAQAEAAAAAAAAAABcMDEGuV5Nanms6rXK8JrU81g1vheE1risaa6cHBq8VzHTg4NX51z0104ODU4rkOnCcGpxXM1vg5XWb5rmNcnKs81kXDBnEAAAAAAAAABcXEiwbiyNSJKsZbkiyNSJK1KjrJFnlZ5SVqVHWSE8tckqysuskOF4Xpekbk8s8HDXR0Lz5Z4S+Wuol9CWeWOUvlu1m1XOyM3yzfLdrNrTnZGbGbGrUtVysjFiWNalrTlcZsRUqudQAZAAAAAAF1AF1ZWQXqt9LPTmJjU912npe3HVMbn6V27XtwNTGp+td+17cDUxr6137O3DTTD6137TtxDE+tdeztx0XEv6V07S+mE1cYv6VvpOmAxm+61qagrO0AEAAAAf/Z);
+}
+
+
+
+form {
+    background: url(https://img.freepik.com/free-photo/empty-save-texture-room-light_1258-175.jpg?size=626&ext=jpg);
+
+
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+.unos-teksta {
+    border: 2px black solid;
+    padding: 20px;
+    text-align: center;
+}
+
+input {
+    align-content: center;
+    height: 35px;
+}
+
+button {
+    background-color: crimson;
+    outline-color: khaki;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+
+.unos-teksta h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+div p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.baner {
+    font-size: 20pt;
+    border: 4px black solid;
+    color: black;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}

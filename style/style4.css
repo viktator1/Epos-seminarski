@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+    background: url("https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/H8WuRINimqur8ud/black-numbers-background_b4eu7wk3_thumbnail-1080_01.png");
+    height: 100%;
+}
+
+.uplata {
+    margin: auto;
+    margin-top: 5em;
+    padding: 10% 10% 5% 10%;
+    background-color: cornflowerblue;
+    min-width: 30%;
+    height: 50%;
+    cursor: move;
+}
+
+.glavna-navigacija {
+    width: 100%;
+}
+
+.zaglavlje {
+
+    background-image: none;
+    background-color: cornflowerblue;
+}

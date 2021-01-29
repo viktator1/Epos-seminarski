@@ -1,0 +1,244 @@
+.glavna-navigacija {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.zaglavlje {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: cornflowerblue;
+    color: white;
+    width: 100%;
+    /* max-width: 90%;
+    min-width: 70%; */
+}
+
+.ime-projekta {
+    font-size: 3rem;
+    margin: 1%;
+}
+
+.linkovi-zaglavlje ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 2rem;
+}
+
+.linkovi-zaglavlje li {
+    list-style: none;
+}
+
+.linkovi-zaglavlje li a {
+    text-decoration: none;
+    color: white;
+    padding: 2rem;
+    display: block;
+}
+
+.linkovi-zaglavlje li:hover {
+    background-color: darkgray;
+}
+
+.dugme-meni {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60px;
+    height: 40px;
+}
+
+.dugme-meni .crta {
+    height: 8px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media(max-width: 1150px) {
+    .dugme-meni {
+        display: flex;
+    }
+
+    .linkovi-zaglavlje {
+        display: none;
+        width: 100%;
+    }
+
+    .zaglavlje {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .linkovi-zaglavlje ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .linkovi-zaglavlje li {
+        text-align: center;
+    }
+
+    .linkovi-zaglavlje li a {
+        padding: .5rem 1rem;
+    }
+
+    .linkovi-zaglavlje.active {
+        display: flex;
+    }
+
+}
+
+body,
+html {
+    background-color: cornflowerblue;
+    margin: 0;
+    height: 100%;
+}
+
+
+
+.glavni {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+#identifikator {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    /* left: 79.6%; */
+    display: grid;
+    text-transform: capitalize;
+    font-weight: bold;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    /* margin: 3px;*/
+    background-color: crimson;
+    text-align: left;
+    justify-content: left;
+    /* width: 20%;  */
+
+
+}
+
+#identifikator p {
+    margin: 3px;
+}
+
+#izvuceni-brojevi {
+    background-color: whitesmoke;
+    width: 60%;
+    margin: 10px;
+    border: 3px black solid;
+    font-size: 20px;
+}
+
+#izvlacenje-broja {
+    width: 80px;
+    height: 80px;
+    margin: 25px;
+    background-color: whitesmoke;
+    border: 3px solid black;
+    text-align: center;
+    font-size: 60px;
+}
+
+
+.levo {
+    left: 0;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+
+
+
+}
+
+.desno {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 5px solid black;
+
+    width: 40%;
+
+}
+
+
+.brojevi {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.broj {
+    background-color: whitesmoke;
+    font-weight: bolder;
+    border-radius: 45px;
+    padding: 10px;
+    text-align: center;
+    height: 20px;
+    width: 25px;
+    margin: 5px;
+    transition: 1s;
+}
+
+.izvucen {
+    animation-name: animacija;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    background-color: yellow;
+}
+
+#uplatii {
+    background-color: green;
+    padding: 10px;
+}
+
+#pokreni {
+    background-color: crimson;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.izbor-brojeva {
+    min-height: 30%;
+    width: 100%;
+    margin-top: 10px;
+    border: green solid;
+    background-color: whitesmoke;
+    z-index: -1;
+}
+
+.polja-za-dugmice {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: yellow;
+    color: red;
+    text-align: center;
+}
+
+@keyframes animacija {
+    from {
+        background-color: crimson;
+
+    }
+
+    to {
+        background-color: yellow;
+    }
+}

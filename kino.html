@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style2.css">
+</head>
+<body>
+    <div class="glavna-navigacija">
+        <nav class = "zaglavlje">
+            <div class = "ime-projekta">Grcki kino</div>
+            <a href="#" class ="dugme-meni">
+                <span class ="crta"></span>
+                <span class ="crta"></span>
+                <span class ="crta"></span>
+            </a>
+            <div class = "linkovi-zaglavlje">
+                <ul>
+                    <li><a href="index.html">Izloguj se</a></li>
+                    <li><a href="kino.html">Moj broj</a></li>
+                    <li><a href="pravila.html">Pravila igre</a></li>
+                    <li><div id="identifikator">
+                        <p class="paragraf">Korisnik:</p><p id="prenos-imena"></p>
+                        <p>Kredit: </p><p id="kredit">test</p>
+                    </div></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    
+    
+    <div class="glavni">
+        <div class="levo">
+            
+                <div><textarea id="izvuceni-brojevi" rows="4" cols="5">  </textarea><br></div>
+                <div class="brojevi">
+                    <div id="1" class="broj">1</div>
+                    <div id="2" class="broj">2</div>
+                    <div id="3" class="broj">3</div>
+                    <div id="4" class="broj">4</div>
+                    <div id="5" class="broj">5</div>
+                    <div id="6" class="broj">6</div>
+                    <div id="7" class="broj">7</div>
+                    <div id="8" class="broj">8</div>
+                    <div id="9" class="broj">9</div>
+                    <div id="10" class="broj">10</div>
+                    <div id="11" class="broj">11</div>
+                    <div id="12" class="broj">12</div>
+                    <div id="13" class="broj">13</div>
+                    <div id="14" class="broj">14</div>
+                    <div id="15" class="broj">15</div>
+                    <div id="16" class="broj">16</div>
+                    <div id="17" class="broj">17</div>
+                    <div id="18" class="broj">18</div>
+                    <div id="19" class="broj">19</div>
+                    <div id="20" class="broj">20</div>
+                    <div id="21" class="broj">21</div>
+                    <div id="22" class="broj">22</div>
+                    <div id="23" class="broj">23</div>
+                    <div id="24" class="broj">24</div>
+                    <div id="25" class="broj">25</div>
+                    <div id="26" class="broj">26</div>
+                    <div id="27" class="broj">27</div>
+                    <div id="28" class="broj">28</div>
+                    <div id="29" class="broj">29</div>
+                    <div id="30" class="broj">30</div>
+                    <div id="31" class="broj">31</div>
+                    <div id="32" class="broj">32</div>
+                    <div id="33" class="broj">33</div>
+                    <div id="34" class="broj">34</div>
+                    <div id="35" class="broj">35</div>
+                    <div id="36" class="broj">36</div>
+                    <div id="37" class="broj">37</div>
+                    <div id="38" class="broj">38</div>
+                    <div id="39" class="broj">39</div>
+                    <div id="40" class="broj">40</div>
+                    <div id="41" class="broj">41</div>
+                    <div id="42" class="broj">42</div>
+                    <div id="43" class="broj">43</div>
+                    <div id="44" class="broj">44</div>
+                    <div id="45" class="broj">45</div>
+                    <div id="46" class="broj">46</div>
+                    <div id="47" class="broj">47</div>
+                    <div id="48" class="broj">48</div>
+                    <div id="49" class="broj">49</div>
+                    <div id="50" class="broj">50</div>
+                    <div id="51" class="broj">51</div>
+                    <div id="52" class="broj">52</div>
+                    <div id="53" class="broj">53</div>
+                    <div id="54" class="broj">54</div>
+                    <div id="55" class="broj">55</div>
+                    <div id="56" class="broj">56</div>
+                    <div id="57" class="broj">57</div>
+                    <div id="58" class="broj">58</div>
+                    <div id="59" class="broj">59</div>
+                    <div id="60" class="broj">60</div>
+                    <div id="61" class="broj">61</div>
+                    <div id="62" class="broj">62</div>
+                    <div id="63" class="broj">63</div>
+                    <div id="64" class="broj">64</div>
+                    <div id="65" class="broj">65</div>
+                    <div id="66" class="broj">66</div>
+                    <div id="67" class="broj">67</div>
+                    <div id="68" class="broj">68</div>
+                    <div id="69" class="broj">69</div>
+                    <div id="70" class="broj">70</div>
+                    <div id="71" class="broj">71</div>
+                    <div id="72" class="broj">72</div>
+                    <div id="73" class="broj">73</div>
+                    <div id="74" class="broj">74</div>
+                    <div id="75" class="broj">75</div>
+                    <div id="76" class="broj">76</div>
+                    <div id="77" class="broj">77</div>
+                    <div id="78" class="broj">78</div>
+                    <div id="79" class="broj">79</div>
+                    <div id="80" class="broj">80</div>
+                </div>
+        </div>
+        
+        <div class="desno">           
+            <p id="izvlacenje-broja"></p>
+            <div>
+                <button onclick="izvlacenje()" id="pokreni">Pokreni</button>
+                <button onclick="uplata()" id="uplatii">Uplati tiket</button>
+            </div>
+            <div id="za-uplatu" class="izbor-brojeva">
+                <label>Izaberite koliko brojeva zalite da uplatite:</label>
+                <select name="izborBrojeva" id="izborBrojeva">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <button id="potvrdi" onclick="potvrdi()">Potvrdi</button>
+                <div id="prozor-za-izbor-brojeva">
+
+                </div>
+                <div class="polja-za-dugmice">
+                    <button id="uplati" onclick="uplati()">Uplati</button>
+                    <button id="zatvori" onclick="zatvori()">Zatvori</button>
+                </div>
+            </div>               
+        </div>
+    </div>
+
+<script src="script/script2.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+.zaglavlje {
+    background: url("https://image.shutterstock.com/image-vector/gold-background-vector-illustration-eps10-260nw-1674266935.jpg");
+
+
+    background-size: 96%;
+    display: flex;
+    color: white;
+    border-style: none;
+
+
+}
+
+.naslov {
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 70px;
+    text-align: center;
+    padding-left: 20px;
+}
+
+body {
+    background: url("https://media.gettyimages.com/vectors/gambling-background-vector-id1098159260");
+    background-size: 100%;
+
+}
+
+.textbox {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    width: 89%;
+    position: relative;
+    border: 5px whitesmoke;
+    border-style: solid;
+    padding: 50px;
+    margin: 20px;
+}
+
+.pravila {
+    margin: 10px;
+}
