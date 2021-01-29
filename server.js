@@ -14,7 +14,7 @@ const database=knex ({
     }
   });
 
-
+const PORT=process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
@@ -22,6 +22,8 @@ app.use(express.json());
 function prikaziTabelu(){
     database.select('*').from('korisnici').then(data=>console.log(data));
 }
+
+app.get("/",(req,res)=>{res.send("aplikacija radi");})
 
 app.post("/register",(req,res)=>{
     let ime=req.body.name;
@@ -64,7 +66,7 @@ app.put("/azuriranjeKredita",(req,res)=>{
 
 
 
-app.listen(process.env.PORT || 3000,()=>{
+app.listen(PORT,()=>{
     console.log(`aplikacija je pokrenuta na portu ${PORT}`);
 });
 
