@@ -60,7 +60,7 @@ async function izvlacenje(){
         poljeZaBrojeve.innerHTML=izvuceniBrojevi;
         document.getElementById(broj).classList.add("izvucen");
         let promise=new Promise((resolve,reject)=>{
-            setTimeout(()=>{resolve()},2000);
+            setTimeout(()=>{resolve()},1000);
         })
         await promise;
 
